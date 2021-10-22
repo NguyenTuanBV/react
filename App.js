@@ -7,6 +7,7 @@ import ListProduct from './src/screens/ListProduct'
 import Product from './src/screens/Product'
 import YourBag from './src/screens/YourBag'
 import Home from './src/screens/Home'
+export default function App() {
 function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -32,7 +33,6 @@ function DetailsScreen({ navigation }) {
 }
 
 const Stack = createNativeStackNavigator();
-function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -40,7 +40,6 @@ function App() {
         <Stack.Screen name="Details" component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
-export default App;
